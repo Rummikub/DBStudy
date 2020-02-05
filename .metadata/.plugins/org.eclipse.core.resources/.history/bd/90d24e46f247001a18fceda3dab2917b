@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>버즈 오브 프레이</title>
+</head>
+<body>
+   <h1>영화상세</h1>
+   <hr>
+	<center>
+	<table border=0 width=8000>
+	<tr>
+	<td rowspan="6"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83026/83026_320.jpg" width=150 height=200 align="left"></td>
+	 </tr>
+	 <tr>
+	  <td><h2><b>버즈 오브 프레이(할리 퀸의 황홀한 해방)</b></h2></td>
+	 </tr>
+	 <tr>
+	  <td><h5><b>BIRDS OF PREY (AND THE FANTABULOUS EMANCIPATION OF ONE HARLEY QUINN)</b></h5></td>
+	 </tr>
+	 <tr>
+	   <td>감독 : 캐시 얀 / 배우 : 마고 로비 ,  메리 엘리자베스 윈스티드 ,  저니 스몰렛 </td>
+	  </tr>
+	   <tr>
+	    <td>장르 : 범죄, 액션, 어드벤처 / 기본 : 15세 이상, 109분, 미국</td>
+	  </tr>
+	   <tr>
+	    <td>개봉 : 2020.02.05</td>
+	  </tr>
+	</table>
+ 	</center>
+</body>
+</html>

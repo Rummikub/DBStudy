@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<!-- 아무것도 써있지 않은 html은 5버전이라는 뜻 
+	<html>
+		<head>
+			<title></title> = 제목
+			<script></script> = 이벤트처리
+			<style></style> = 내부css
+			<link></link> = 외부css
+		</head>
+	<body>
+		화면에 출력하는 태그
+</body>
+	</html>
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 	HELLO
+</body>
+</html>

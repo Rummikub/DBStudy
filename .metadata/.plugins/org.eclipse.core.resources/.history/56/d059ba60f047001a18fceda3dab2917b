@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>버즈 오브 프레이</title>
+</head>
+<body>
+   <h1>영화상세</h1>
+   <hr>
+	<center>
+	<img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83026/83026_320.jpg" width=150 height=200 align="left">
+	<table border=0 width=1000>
+	<h2 align="left"><b>&nbsp;&nbsp;버즈 오브 프레이(할리 퀸의 황홀한 해방)</b></h2>
+	<hr>
+	<h5 align="left">&nbsp;&nbsp;BIRDS OF PREY (AND THE FANTABULOUS EMANCIPATION OF ONE HARLEY QUINN)</h5>
+	 <tr height="30">
+	   <tr width=10% align="center">3</td>
+	   <td width=45%><a href="detail.html">美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</a></td>
+	   <td width=15% align="center">심청이</td>
+	   <td width=20% align="center">2020-02-04</td>
+	   <td width=10% align="center">100</td>
+	  </tr>	
+  	<tr height="30">
+	   <td width=10% align="center">3</td>
+	   <td width=45%><a href="detail.html">美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</a></td>
+	   <td width=15% align="center">심청이</td>
+	   <td width=20% align="center">2020-02-04</td>
+	   <td width=10% align="center">100</td>
+	  </tr>	 
+  	<tr height="30">
+	   <td width=10% align="center">3</td>
+	   <td width=45%><a href="detail.html">美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</a></td>
+	   <td width=15% align="center">심청이</td>
+	   <td width=20% align="center">2020-02-04</td>
+	   <td width=10% align="center">100</td>
+	  </tr>	 
+  	<tr height="30">
+	   <td width=10% align="center">3</td>
+	   <td width=45%><a href="detail.html">美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</a></td>
+	   <td width=15% align="center">심청이</td>
+	   <td width=20% align="center">2020-02-04</td>
+	   <td width=10% align="center">100</td>
+	  </tr>	 
+  	<tr height="30">
+	   <td width=10% align="center">3</td>
+	   <td width=45%><a href="detail.html">美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</a></td>
+	   <td width=15% align="center">심청이</td>
+	   <td width=20% align="center">2020-02-04</td>
+	   <td width=10% align="center">100</td>
+	  </tr>	 
+  	<tr height="30">
+	   <td width=10% align="center">3</td>
+	   <td width=45%><a href="detail.html">美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</a></td>
+	   <td width=15% align="center">심청이</td>
+	   <td width=20% align="center">2020-02-04</td>
+	   <td width=10% align="center">100</td>
+	  </tr>	 
+  <tr height="30">
+	   <td width=10% align="center">3</td>
+	   <td width=45%><a href="detail.html">美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</a></td>
+	   <td width=15% align="center">심청이</td>
+	   <td width=20% align="center">2020-02-04</td>
+	   <td width=10% align="center">100</td>
+	  </tr>	 
+	</table>
+ 	</center>
+</body>
+</html>

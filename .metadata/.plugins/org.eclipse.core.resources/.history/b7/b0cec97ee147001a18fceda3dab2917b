@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+	 <h1>게시판</h1>
+	 <table border=0 width=700>
+	  <tr bgcolor="#ccccff">
+	   <th>번호</th>
+	   <th>제목</th>
+	   <th>이름</th>
+	   <th>작성자</th>
+	   <th>조회수</th>
+	 </table>
+	</center>
+</body>
+</html>

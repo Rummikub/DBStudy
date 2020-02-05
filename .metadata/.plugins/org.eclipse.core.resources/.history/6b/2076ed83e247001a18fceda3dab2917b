@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+	 <h1>게시판</h1>
+	 <table border=0 width=700>
+	  <tr bgcolor="#ccccff" height="30">
+	   <th width=10%>번호</th>
+	   <th width=45%>제목</th>
+	   <th width=15%>이름</th>
+	   <th width=20%>작성일</th>
+	   <th width=10%>조회수</th>
+	  </tr>
+	  <tr height="30">
+	   <td width=10%>3</td>
+	   <td width=45%>美배우 "오스카는 미국의 것, 미국 감독 상 받아야" 투표 공개</td>
+	   <td width=15%>이름</td>
+	   <td width=20%>작성일</td>
+	   <td width=10%>조회수</td>
+	  </tr>	 
+	  <tr height="30">
+	   <td width=10%>2</td>
+	   <td width=45%>'기생충' 신스틸러 장혜진X박명훈 측 "7일 출국해 美 아카데미</td>
+	   <td width=15%>이름</td>
+	   <td width=20%>작성일</td>
+	   <td width=10%>조회수</td>
+	  </tr>
+	  <tr height="30">
+	   <td width=10%>1</td>
+	   <td width=45%>美아카데미 투표 마감→'기생충' 전 주역들 참석 확정..결과만</td>
+	   <td width=15%>이름</td>
+	   <td width=20%>작성일</td>
+	   <td width=10%>조회수</td>
+	  </tr> 
+	 </table>
+	 <hr width=900>
+	</center>
+</body>
+</html>

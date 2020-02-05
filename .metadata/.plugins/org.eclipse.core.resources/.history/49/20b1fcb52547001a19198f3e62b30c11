@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- 
+		<ul> <ol> <table> ==> 전부block속성이다 = 한줄에 하나씩만 들어가는 것 <=> inline속성
+		===  === 순서가 있는 출력 : order 
+		순서없이 출력  : unorder list
+		====================> 메뉴 
+ 		<dl> <dt> <dd>
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>목록 출력</title>
+</head>
+<body>
+  <ul>
+  	<li>자바</li>
+  	<li>오라클</li>
+  	<li>Spring</li>
+  	<li>HTML&CSS</li>
+  	<li>JSP</li>
+  </ul>
+  <ol type="a">
+	<li>자바</li>
+  	<li>오라클</li>
+  	<li>Spring</li>
+  	<li>HTML&CSS</li>
+  	<li>JSP</li>  
+  </ol>
+  <h1>과정 설명</h1>
+  <dl>
+   <dt>자바</dt>
+   <dd>데이터를 처리</dl>
+   <dt>오라클</dt>
+   <dd>데이터저장, 공유</dd>
+   <dt>HTML/CSS</dt>
+   <dd>브라우저 화면 출력</dd>
+   <dt>JSP</dt>
+   <dd>HTML+Java</dd>   
+  </dl>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+	p, br, pre, hr
+	=> HTML 한줄 문자열
+	strong : 강조체
+	b: bold체
+	i: 이태릭체 =em
+	q: "" 따옴표
+	**span: 스타일 지정 태그
+	**sup: 위첨자
+ -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    이 연구를 수행한 스위스 제네바대(UNIGE) 의대의 하르나 디프너 교수팀은 관련 논문을 미국 국립과학원 회보(PNAS)에 발표했다. <br>
+   <span style="color:red"> 디프너 교수는 당뇨병 등 내분비계 질환 연구의 권위자로 알려졌다.</span>
+    <p> 이 연구를 수행한 스위스 제네바대(UNIGE) 의대의  <mark>하르나 디프너</mark> 교수팀은 관련 논문을 미국 국립과학원 회보(PNAS)에 발표했다.<br>  
+    디프너 교수는 당뇨병 등 내분비계 질환 연구의 권위자로 알려졌다.
+  
+  <pre> 김예서 천재 우오우옹우 눈이 온다 우와!
+  	우와
+  	우와
+  	우와아아아아아 
+  </pre>
+  <hr>
+  <blockquote>4일 정치권에 따르면 정동영 민주평화당 대표는 3일 오전 국회에서 심상정 정의당 대표와 회동했다. <br>
+  이날 회동에선 안 전 의원이 이끄는 '반문연대' 중심 야권연대가 아닌, 진보개혁성향의 연대 구성이 논의된 것으로 알려졌다. <br>
+  정 대표는 앞서 지난달 16일에는 손학규 바른미래당 대표와 만찬회동을 했다. <q>이 자리에선 <strong>바른미래당-민주평화당-대안신당</strong>이 연대하자는 데 뜻을 모은 데 더해,</q>'옛 국민의당'으로 회귀하지 않을 수 있는 방안에 대한 논의가 이뤄진 것으로 전해졌다.
+  </blockquote>
+  HTML<sup>5</sup>
+  HTML<sub>5</sub>
+</body>
+</html>

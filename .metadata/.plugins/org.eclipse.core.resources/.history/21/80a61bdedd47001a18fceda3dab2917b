@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- 
+		<a> : 다른 주소로 이동(링크)
+		<a href="" target="">
+			======  ====== _blank 새 창 띄움 <-> _self 
+			이동할 주소
+		 
+		 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

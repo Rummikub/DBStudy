@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- 
+				image 출력 태그 (inline)
+				<img src="" width="" height="" title=""> 
+					======					   =========
+				 출력할 파일명						풍선도움말
+				 
+				 ==> 경로 ★ 
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<img src="..img/movie1.jpg"width=150 height=220 title="백두산">
+	<img src="..img/movie2.jpg"width=150 height=220>	
+	<img src="..img/movie3.jpg"width=150 height=220>
+	<img src="..img/movie4.jpg"width=150 height=220>
+	<img src="..img/movie5.jpg"width=150 height=220>
+</body>
+</html>

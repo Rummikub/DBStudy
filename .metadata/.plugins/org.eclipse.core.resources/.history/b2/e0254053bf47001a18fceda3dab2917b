@@ -1,0 +1,57 @@
+package com.sist.dao;
+import java.util.*;
+//Web에 뿌려주기 위해
+public class MainClass {
+
+	public static void main(String[] args) {
+		EmpDAO dao=new EmpDAO();
+		ArrayList<EmpVO> list=dao.empAllData();
+		
+		//출력
+		for(EmpVO vo:list)
+		{
+			System.out.println(vo.getEmpno()+" "
+					+vo.getEname()+" "
+					+vo.getJob()+" "
+					+vo.getMgr()+" "
+					+vo.getHiredate().toString()+" "  //VO에서 Date로 잡아서 읽어올때는 toString
+					+vo.getSal()+" "
+					+vo.getComm()+" "
+					+vo.getDeptno());
+		}
+		//연습) 사번 검색해서 정보 가져오게 출력
+		Scanner scan=new Scanner(System.in);
+		System.out.print("사번 입력: ");
+		int empno=scan.nextInt();
+		
+		EmpVO vo=dao.empDetailData(empno);
+		System.out.println("************검색결과*********");
+		System.out.println(vo.getEmpno()+" "
+				+vo.getEname()+" "
+				+vo.getJob()+" "
+				+vo.getMgr()+" "
+				+vo.getHiredate().toString()+" "  
+				+vo.getSal()+" "
+				+vo.getComm()+" "
+				+vo.getDeptno());
+		//연습)K포함된 이름 출력
+		System.out.print("이름 입력: ");
+		String ename=scan.toString();
+		
+		EmpDAO dao2=new EmpDAO();
+		ArrayList<EmpVO> list1=dao.empFindData(ename);
+		//출력
+		System.out.println("************검색결과*********");
+		for(EmpVO vo1:list)
+		{
+			System.out.println(vo.getEmpno()+" "
+					+vo1.getEname()+" "
+					+vo1.getJob()+" "
+					+vo1.getMgr()+" "
+					+vo1.getHiredate().toString()+" "  //VO에서 Date로 잡아서 읽어올때는 toString
+					+vo1.getSal()+" "
+					+vo1.getComm()+" "
+					+vo1.getDeptno());
+		}
+	}
+}

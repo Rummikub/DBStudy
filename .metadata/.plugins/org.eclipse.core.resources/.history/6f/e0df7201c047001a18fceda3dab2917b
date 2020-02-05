@@ -1,0 +1,212 @@
+package com.sist.dao;
+// 오라클 연동 기능
+/*
+ 		1. 드라이버 등록
+ 		2. 오라클 연결
+ 		3. 오라클 해제
+ 		4. 기능 설정 => SQL전송, 결과값
+ 		DML
+ 		= SELECT 검색
+ 		1) 형식 
+ 			SELECT * | COL1,COL2 
+ 			FROM Table(SELECT,View)
+ 			[
+ 			 	WHERE 조건절(컬럼명 연산자 값)
+ 			 		  empno = 7788
+ 			 		  ename LIKE '%A%'
+ 			 	GROUP BY 컬럼명 (OR 함수)   ===> TO_CHAR(hiredate,'YYYY') 
+ 			 	HAVING 그룹 조건 => 집합함수
+ 			 	ORDER BY (컬럼명,함수) ASC|DESC;
+ 			]
+ 			= 연산자
+ 			= 내장 함수
+ 			
+ 		= INSERT 추가 
+ 		= UPDATE 수정
+ 		= DELETE 삭제
+ */
+import java.util.*;
+import java.sql.*;
+
+public class EmpDAO {
+	//연결 도구 Connection (Socket)
+	private Connection conn;
+	//입출력  ; InputStream,OutputStream 갖고 있는 애
+	private PreparedStatement ps;
+	//URL 주소
+	private final String URL="jdbc:oracle:thin:@localhost:1521:XE";
+	
+	//1 드라이버(생성자)
+	public EmpDAO()
+	{
+		try 
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch (Exception ex)
+		{
+			ex.printStackTrace();   // 오류나면 처리해라
+		}
+	}
+	
+	//2 연결
+	public void getConnection()
+	{
+		try
+		{
+			conn=DriverManager.getConnection(URL,"hr","happy");
+			
+		}catch (Exception ex) {}
+	}
+	
+	//3 해제
+	public void disConnection()
+	{
+		try
+		{
+			if(ps!=null) ps.close();
+			if(conn!=null) conn.close();
+		} catch(Exception ex) {}
+
+	}
+	
+	//4 기능 설정
+	// SELECT=> 전체 데이터 읽어오기
+	public ArrayList<EmpVO> empAllData()
+	{
+		ArrayList<EmpVO> list=new ArrayList<EmpVO>();
+		try
+		{
+			//1연결
+			getConnection();
+			//2SQL
+			String sql="SELECT * "
+					+"FROM emp "
+					+"ORDER BY empno";       	//비동기화기 때문에 목록 출력시 컬럼명으로 정렬 ==> 추후에 INDEX로 바뀔 것!
+			//3오라클 전송
+			ps=conn.prepareStatement(sql);     //입출력장치를 sql문장 수행하면서 연결하라 
+			//4결과값 출력
+			ResultSet rs=ps.executeQuery();   //쿼리문장을 수행하라
+			// 데이터 개수 알 수 없음 => while
+			while(rs.next())      				 //단, 테이블 커서 위치에서 한줄씩 읽어와라 <-> rs.previous()는 커서가 마지막에 위치함  
+			{
+				EmpVO vo=new EmpVO();		// row한줄을 한번에 읽어야 되니까 8개의 데이터 채운다
+				vo.setEmpno(rs.getInt(1));
+				vo.setEname(rs.getString(2));
+				vo.setJob(rs.getString(3));
+				vo.setMgr(rs.getInt(4));
+				vo.setHiredate(rs.getDate(5));
+				vo.setSal(rs.getInt(6));
+				vo.setComm(rs.getInt(7));
+				vo.setDeptno(rs.getInt(8));
+				
+				list.add(vo);  // 14개 vo를 모아서 전송
+			}
+			rs.close();
+			//5list에 첨부
+		}catch (Exception ex)
+		{
+			//6에러처리
+			ex.printStackTrace();
+		}
+		finally
+		{
+			//7연결해제
+			disConnection();
+		}
+		return list;
+	}
+	// SELECT=> 원하는 컬럼만 읽기
+	// SELECT=> WHERE 문장 이용
+	public EmpVO empDetailData(int empno)   // 리턴형, 매개변수 잡는 것 조심          --   사번을 넣어주면 사원정보 하나를 넘겨줌 (primary key)
+	{
+		EmpVO vo=new EmpVO();
+		try
+		{
+			//1연결
+			getConnection();
+			//2SQL
+			String sql="SELECT * "
+					+"FROM emp "
+					+"WHERE empno=?";       	//비동기화기 때문에 목록 출력시 컬럼명으로 정렬 ==> 추후에 INDEX로 바뀔 것!
+			//3오라클 전송
+			ps=conn.prepareStatement(sql);    
+			ps.setInt(1, empno);
+			//4결과값 출력
+			ResultSet rs=ps.executeQuery();   //쿼리문장을 수행하라
+			rs.next();
+			// row한줄을 한번에 읽어야 되니까 8개의 데이터 채운다
+			vo.setEmpno(rs.getInt(1));
+			vo.setEname(rs.getString(2));
+			vo.setJob(rs.getString(3));
+			vo.setMgr(rs.getInt(4));
+			vo.setHiredate(rs.getDate(5));
+			vo.setSal(rs.getInt(6));
+			vo.setComm(rs.getInt(7));
+			vo.setDeptno(rs.getInt(8));
+			rs.close();
+		
+		}catch (Exception ex)
+		{
+			
+			ex.printStackTrace();
+		}
+		finally
+		{
+			
+			disConnection();
+		}
+		return vo;
+	}
+	// SELECT=> 연산자 사용 방법
+	// SELECT=> 함수 이용
+	// SELECT=> GROUP BY
+	
+	
+	// K포함된 애 찾아오기
+	public ArrayList<EmpVO> empFindData(String ename)
+	{
+		ArrayList<EmpVO> list=new ArrayList<EmpVO>();
+		try
+		{
+			//1연결
+			getConnection();
+			//2SQL
+			String sql="SELECT * "
+					+"FROM emp "
+					+"WHERE ename LIKE '%'||?||'%'";
+
+			//3오라클 전송
+			ps=conn.prepareStatement(sql);     //입출력장치를 sql문장 수행하면서 연결하라 
+			ps.setString(1, ename);  			// ===> ?가 나오면 값채우는것 꼭 넣어줘야 됨 
+			//4결과값 출력
+			ResultSet rs=ps.executeQuery();   //쿼리문장을 수행하라
+			// 데이터 개수 알 수 없음 => while
+			while(rs.next())      				 //단, 테이블 커서 위치에서 한줄씩 읽어와라 <-> rs.previous()는 커서가 마지막에 위치함  
+			{
+				EmpVO vo=new EmpVO();		// row한줄을 한번에 읽어야 되니까 8개의 데이터 채운다
+				vo.setEmpno(rs.getInt(1));
+				vo.setEname(rs.getString(2));
+				vo.setJob(rs.getString(3));
+				vo.setMgr(rs.getInt(4));
+				vo.setHiredate(rs.getDate(5));
+				vo.setSal(rs.getInt(6));
+				vo.setComm(rs.getInt(7));
+				vo.setDeptno(rs.getInt(8));
+				
+				list.add(vo);  // 14개 vo를 모아서 전송
+			}
+			rs.close();
+			//5list에 첨부
+		}catch (Exception ex)
+		{
+			//6에러처리
+			ex.printStackTrace();
+		}
+		finally
+		{
+			//7연결해제
+			disConnection();
+		}
+		return list;
+	}
+}

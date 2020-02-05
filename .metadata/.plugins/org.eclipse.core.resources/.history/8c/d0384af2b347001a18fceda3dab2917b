@@ -1,0 +1,30 @@
+package com.sist.dao;
+/*
+ EMPNO                                              NUMBER  => int 
+ ENAME                                              VARCHAR2(10) => String
+ JOB                                                VARCHAR2(9) => String
+ MGR                                                NUMBER(4) => int
+ HIREDATE                                           DATE  		=> Date
+ SAL                                                NUMBER(7,2) => int		굳이 더블로 안 잡는 이유 : 데이터 자체에 소수점이 없었음
+ COMM                                               NUMBER(7,2) => int
+ DEPTNO                                             NUMBER
+ 
+ 		오라클 데이터형
+ 		문자형
+ 			CHAR, VARCHAR2, CLOB=> String
+ 		숫자형
+ 			NUMBER => NUMBER(4), NUMBER => int, NUMBER(7,2) => double
+ 		날짜형
+ 			DATE=> java.util.Date
+ */
+import java.util.*;
+public class EmpVO {
+	 private int empno;
+	 private String ename;
+	 private String job;
+	 private int mgr;
+	 private Date hiredate;
+	 private int sal;
+	 private int comm;
+	 private int deptno;
+}

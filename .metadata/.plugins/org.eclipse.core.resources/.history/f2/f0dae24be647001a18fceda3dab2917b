@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+	<img src="noticeboard.png" width=900 height=200>
+	<table border=0 width=900>
+		<tr>
+		 <th width=20% bgcolor="#ccccff"></th>
+		 <td width=30% align="center"
+	</table>
+	</center>
+</body>
+</html>

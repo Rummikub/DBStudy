@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- 
+		<ul> <ol> <table> 
+		===  === 순서가 있는 출력
+		순서없이 출력
+		====================> 메뉴 
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>목록 출력</title>
+</head>
+<body>
+  <ul>
+  	<li>
+  	</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+	<img src="noticeboard.png" width=900 height=200>
+	<table border=0 width=900>
+		<tr>
+		 <th width=20% bgcolor="#ccccff">번호</th>
+		 <td width=30% align="center">3</td>
+		 <th width=20% bgcolor="#ccccff">작성일</th>
+		 <td width=30% align="center">2020-02-04</td>
+		</tr>
+		<tr>
+		 <th width=20% bgcolor="#ccccff">이름</th>
+		 <td width=30% align="center">홍길동</td>
+		 <th width=20% bgcolor="#ccccff">조회수</th>
+		 <td width=30% align="center">100</td>
+		</tr>
+		<tr>
+		 <th width=20% bgcolor="#ccccff">제목</th>
+		 <td colspan="3" align="center">홍길동</td>
+		</tr>
+	</table>
+	</center>
+</body>
+</html>

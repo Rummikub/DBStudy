@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\DBDev\DBStudy\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+693226070.index
+1191714688.index
+1683132993.index
+1096382501.index
+1303852091.index
+4038239294.index
+662050480.index
+787576404.index
+2835775148.index

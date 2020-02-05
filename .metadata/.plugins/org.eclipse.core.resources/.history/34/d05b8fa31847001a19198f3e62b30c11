@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+	p, br, pre
+	=> HTML 한줄 문자열
+ -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    이 연구를 수행한 스위스 제네바대(UNIGE) 의대의 하르나 디프너 교수팀은 관련 논문을 미국 국립과학원 회보(PNAS)에 발표했다. <br>
+    디프너 교수는 당뇨병 등 내분비계 질환 연구의 권위자로 알려졌다.
+</body>
+</html>

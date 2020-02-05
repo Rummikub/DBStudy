@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 
+ 	<table>
+ 	   <tr>
+ 		 <th>자바</th> ==> table header  순위, 곡정보, 듣기 ...
+ 		 <td>오라클</td>
+ 	   </tr>
+ 		
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <table border=1 bordercolor=black>
+   <tr bgcolor="yellow">
+   	<th>이름</th>   
+   	<th>국어</th>
+   	<th>영어</th>
+   	<th>수학</th>
+   </tr>
+   <tr>
+   	<td>홍길동</td>
+   	<td>90</td>
+   	<td>80</td>
+   	<td>80</td>
+   </tr>
+   <tr>
+   	<td>심청이</td>
+   	<td>90</td>
+   	<td>80</td>
+   	<td>80</td>   
+   </tr>
+   </table>
+</body>
+</html>

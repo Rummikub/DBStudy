@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- 	속성이 필수다
+		<a> : 다른 주소로 이동(링크)
+		<a href="" target="">데이터</a>
+			======  ====== _blank 새 창 띄움 <-> _self  [default]
+			이동할 주소
+		 
+		 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="http://daum.net" taget="_blank">Daum</a><br> 
+	<a href="http://naver.com">Naver</a>
+	<a href="https://movie.daum.net/moviedb/main?movieId=122090">
+		<img src="https://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Fa6bfbf52ff0e42798e95fe37cc67fddc1579154685345"></a>
+</body>
+</html>

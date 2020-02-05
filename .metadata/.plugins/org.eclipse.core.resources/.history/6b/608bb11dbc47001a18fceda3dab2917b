@@ -1,0 +1,24 @@
+package com.sist.dao;
+import java.util.*;
+//Web에 뿌려주기 위해
+public class MainClass {
+
+	public static void main(String[] args) {
+		EmpDAO dao=new EmpDAO();
+		ArrayList<EmpVO> list=dao.empAllData();
+		
+		//출력
+		for(EmpVO vo:list)
+		{
+			System.out.println(vo.getEmpno()+" "
+					+vo.getEname()+" "
+					+vo.getJob()+" "
+					+vo.getMgr()+" "
+					+vo.getHiredate().toString()+" "  //왜 떄문에 ToString?
+					+vo.getSal()+" "
+					+vo.getComm()+" "
+					+vo.getDeptno());
+		}
+	}
+
+}

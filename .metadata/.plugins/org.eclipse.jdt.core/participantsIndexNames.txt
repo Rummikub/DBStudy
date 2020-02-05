@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\DBDev\DBStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2297664176.index
+\HTML Project1\src

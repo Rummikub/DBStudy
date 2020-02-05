@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- 	속성이 필수다
+		<a> : 다른 주소로 이동(링크)
+		<a href="" target="">데이터</a>
+			======  ====== _blank 새 창 띄움 <-> _self  [default]
+			이동할 주소
+		 
+		 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="http://daum.net" taget="_blank">Daum</a><br> 
+	<a href="http://naver.com">Naver</a>
+</body>
+</html>
