@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- 
+
+	REACT.JS
+	VUE.JS   ==> JSX
+	
+	ES5 ==> ES6-람다식 (현재 ES8)
+	
+	
+	<table></table> ==> 네모칸
+	
+	안에 줄과 행은 설정해야함
+	
+	가로줄 tr
+	한 칸 td
+
+	<table>
+		<tr>
+			<th>문자</th>  -- table header -> 테이블 제목
+			<th>이미지</th>
+			<th>등등</th>
+		</tr>
+		<tr>
+			<td>문자</td>
+			<td>이미지</td>
+			<td>등등</td>
+		</tr>
+	</table>
+
+    
+
+ -->
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Making Table</title>
+</head>
+<body>
+	<table border=1 bordercolor=black>
+	 <thead>
+	  <tr bgcolor="yellow">
+	  	<th>이름</th>
+	  	<th>국어</th>
+	  	<th>영어</th>
+	  	<th>수학</th>
+	  	<th>물리</th>
+	  </tr>
+	 </thead>
+	  <tbody>
+	   <tr>
+	  	<td>홍길동</td>
+	  	<td>80</td>
+	  	<td>70</td>
+	  	<td>90</td>
+	  	<td>100</td>
+	  </tr>
+	  <tr>
+	  	<td>심청이</td>
+	  	<td>80</td>
+	  	<td>70</td>
+	  	<td>90</td>
+	  	<td>100</td>
+	  </tr>
+	  <tr>
+	    <td>이순신</td>
+	  	<td>80</td>
+	  	<td colspan="3" align="center" >70</td>
+	  </tr>
+	 </tbody>
+	  <tfoot>
+	  	<tr>
+	  		<td colspan="5" align="center" >SIST</td>
+	    </tr>
+	  </tfoot>
+	</table>
+</body>
+</html>

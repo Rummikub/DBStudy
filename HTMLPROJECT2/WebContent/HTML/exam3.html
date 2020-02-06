@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--  
+
+	<ul> - block 속성 -> inline으로 바꿔줘야함==> 메뉴
+	====
+	순서 없이 출력
+	. ---
+	. ---
+	. ---
+	
+	
+	<ol> - block 속성, DEFAULT값- 숫자
+	====
+	순서 있게 출력
+	1. ---
+	2. ---
+	3. ---
+	
+	<table> - block 속성 ==> 픽셀에 따라 달라짐 ==> 현재 div로 바뀜! 
+	=======
+	
+	<%
+	pageContext.include("----.jsp")
+	%>
+
+
+
+	<dl>
+		<dt>제목</dt>
+	 	<dd>설명</dd>
+	</dl>
+	
+	
+	
+	
+
+ -->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>목록출력</title>
+</head>
+<body>
+	<ul>
+		<li>자바</li>
+		<li>오라클</li>
+		<li>HTML</li>
+		<li>JSP</li>
+		<li>SPRING</li>
+	</ul>
+	
+	<ol type="A">
+		<li>자바</li>
+		<li>오라클</li>
+		<li>HTML</li>
+		<li>JSP</li>
+		<li>SPRING</li>
+	</ol>
+	<h1>과정 소개</h1>
+	<dl>
+	 	<dt>소제목</dt>
+		<dd>해당 내용</dd>
+		<dt>자바</dt>
+		<dd>데이터처리</dd>
+		<dt>오라클</dt>
+		<dd>데이터 저장, 공유</dd>
+		<dt>HTML/CSS</dt>
+		<dd>브라우저 화면 출력(화면 UI)</dd>
+		<dt>JSP</dt>
+		<dd>HTML+Java</dd>
+		<dt>Spring</dt>
+		<dd>통합개발</dd>
+	</dl>
+	
+	<iframe src="exam1.html"></iframe>
+	
+</body>
+</html>
