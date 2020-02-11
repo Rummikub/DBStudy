@@ -13,16 +13,15 @@ public class MainClass {
 		//출력
 		for(TripVO vo:list)
 		{
-			/*
-			System.out.println(vo.getEmpno()+" "
-					+vo.getEname()+" "
-					+vo.getJob()+" "
-					+vo.getMgr()+" "
-					+vo.getHiredate().toString()+" "
-					+vo.getSal()+" "
-					+vo.getComm()+" "
-					+vo.getDeptno());
-					*/
+			System.out.println(vo.getPno()+" "
+					+vo.getPname()+" "
+					+vo.getGrade()+" "
+					+vo.getTotalreview()+" "
+					+vo.getRank()+" "
+					+vo.getTag()+" "
+					+vo.getAddr()+" "
+					+vo.getOpnhr());
+
 		}
 		
 	}
