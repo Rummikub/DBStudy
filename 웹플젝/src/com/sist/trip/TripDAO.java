@@ -44,18 +44,17 @@ public class TripDAO {
 				try
 				{
 					getConnection(); // open
-					String sql="INSERT INTO trip VALUES("
-											+"(SELECT NVL(MAX(MNO)+1,1)FROM trip,?,?,?,?,?,?,?)";  // 필요한 변수개수, 페이지 번호
+					String sql="INSERT INTO trip VALUES((SELECT NVL(MAX(PNO)+1,1)FROM trip,?,?,?,?,?,?,?)";  // 필요한 변수개수, 페이지 번호
 					ps=conn.prepareStatement(sql); // connection
 					ResultSet rs=ps.executeQuery();
 				
 					// ?에 데이터 입력
 					//ps.setString(1,vo.get변수명());
-					ps.setInt(1,vo.getPno());
-					ps.setString(2, vo.getPname());
-					ps.setInt(3, vo.getGrade());
-					ps.setString(4,vo.getTotalreview());
-					ps.setInt(5, vo.getRank());
+					ps.setString(1, vo.getPname());
+					ps.setInt(2, vo.getGrade());
+					ps.setString(3,vo.getTotalreview());
+					ps.setInt(4, vo.getRank());
+					ps.setString(5, vo.getTag());
 					ps.setString(6, vo.getAddr());
 					ps.setString(7, vo.getOpnhr());
 					
@@ -75,10 +74,9 @@ public class TripDAO {
 				ArrayList<TripVO> list = new ArrayList<TripVO>();
 				try {
 					getConnection();
-					String sql= "SELECT mno,title,singer,poster,album, idcliment,state FROM music_genie "
-							+"ORDER BY rank ASC";
+					String sql= "SELECT pno,pname,grade,totalreview,rank,addr,opnhr FROM detailpage";
 					ps=conn.prepareStatement(sql);
-					ResultSet rs = ps.executeQuery();
+					ResultSet rs=ps.executeQuery();
 					
 					while(rs.next())
 					{
@@ -89,8 +87,9 @@ public class TripDAO {
 						vo.setGrade(rs.getInt(3));
 						vo.setTotalreview(rs.getString(4));
 						vo.setRank(rs.getInt(5));
-						vo.setAddr(rs.getString(6));
-						vo.setOpnhr(rs.getString(7));
+						vo.setTag(rs.getString(6));
+						vo.setAddr(rs.getString(7));
+						vo.setOpnhr(rs.getString(8));
 						
 						list.add(vo);
 						

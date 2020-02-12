@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="HTML Project4" path="/HTML_Project4" reloadable="true" source="org.eclipse.jst.jee.server:HTML Project4"/><Context docBase="DataBaseJoinProject" path="/DataBaseJoinProject" reloadable="true" source="org.eclipse.jst.jee.server:DataBaseJoinProject"/><Context docBase="HTML Project3" path="/HTML_Project3" reloadable="true" source="org.eclipse.jst.jee.server:HTML Project3"/></Host>
+      <Context docBase="HTML Project4" path="/HTML_Project4" reloadable="true" source="org.eclipse.jst.jee.server:HTML Project4"/><Context docBase="DataBaseJoinProject" path="/DataBaseJoinProject" reloadable="true" source="org.eclipse.jst.jee.server:DataBaseJoinProject"/><Context docBase="HTML Project3" path="/HTML_Project3" reloadable="true" source="org.eclipse.jst.jee.server:HTML Project3"/><Context docBase="CSSProject1" path="/CSSProject1" reloadable="true" source="org.eclipse.jst.jee.server:CSSProject1"/><Context docBase="BoardProject" path="/BoardProject" reloadable="true" source="org.eclipse.jst.jee.server:BoardProject"/><Context docBase="웹플젝" path="/웹플젝" reloadable="true" source="org.eclipse.jst.jee.server:웹플젝"/></Host>
     </Engine>
   </Service>
 </Server>

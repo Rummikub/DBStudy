@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+	CSS  속성을 주는 방법
+	=외부 => .css파일
+	<link href=".css">
+	=내부 =>
+	<head>
+	 <style>
+	 </style>
+	</head>
+	=인라인 
+	<h1 style="">
+ -->
+ <html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 셀렉터 -->
+<style type="text/css">
+/* h1,h2,h3 h4,h5,h6{
+	color:blue;
+	background-color:yellow;
+	font-family:맑은고딕
+} */
+
+
+.h{
+	color:blue;
+	background-color:yellow;
+	font-family:맑은고딕
+}
+
+#hh{
+    color:red;
+	background-color:cyan;
+	font-family:맑은고딕
+}
+</style>
+</head>
+<body>
+	<!-- 
+	속성 ; 값;
+	=== 사용자 정의는 없고 지정된 속성만 사용 가능 -->
+	<h1 id="hh">Hello CSS!</h1>
+	<h1 class="h">Hello CSS!</h1>
+	<h1>Hello CSS!</h1>
+	<h1>Hello CSS!</h1>
+	<h1 class="h">Hello CSS!</h1>
+	<h1>Hello CSS!</h1>
+</body>
+</html>

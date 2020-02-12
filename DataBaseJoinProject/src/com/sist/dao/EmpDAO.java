@@ -54,7 +54,6 @@ public class EmpDAO {
 					+ "FROM emp,dept,salgrade "
 					+ "WHERE emp.deptno=dept.deptno "
 					+ "AND sal BETWEEN losal AND hisal";
-			
 			ps=conn.prepareStatement(sql);
 			
 			ResultSet rs=ps.executeQuery();
