@@ -4,7 +4,7 @@ public class TripVO {
 // TABLE명 ; DETAIL
 	private int pno;
 	private String pname;
-	private int grade;
+	private double grade;
 	private String totalreview;
 	private int rank;
 	private String tag;
@@ -22,10 +22,10 @@ public class TripVO {
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-	public int getGrade() {
+	public double getGrade() {
 		return grade;
 	}
-	public void setGrade(int grade) {
+	public void setGrade(double grade) {
 		this.grade = grade;
 	}
 	public String getTotalreview() {

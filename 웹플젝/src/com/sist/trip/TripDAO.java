@@ -51,7 +51,7 @@ public class TripDAO {
 					// ?에 데이터 입력
 					//ps.setString(1,vo.get변수명());
 					ps.setString(1, vo.getPname());
-					ps.setInt(2, vo.getGrade());
+					ps.setDouble(2, vo.getGrade());
 					ps.setString(3,vo.getTotalreview());
 					ps.setInt(4, vo.getRank());
 					ps.setString(5, vo.getTag());
