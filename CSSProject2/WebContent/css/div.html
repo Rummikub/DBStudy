@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- 
+	외부CSS		: 파일
+		<link rel="stylesheet" href="css파일명">
+	
+	내부CSS		:
+		<head>
+			<style type="text/css">
+			</style>
+		</head>
+			
+	INLINE CSS
+		<div style="">
+		1)외부,내부 css 
+		  =======
+		  1.선택자(Seletor) => Jquery/Jsoup에서 중요 : CSS적용할 태그를찾는다
+		  	= tag : a, p, div...
+		  		
+		  	  tag명{속성:값;속성:값;속성:값...}
+		  	  	   ---
+		  	  		미리 정의 되어 있음
+		  	
+		  	= ID명  (중복x 명칭) => 한번만 사용 가능
+		  		<div id="a b"> (x) ; 공백이 들어가면 두개로 침
+		  		
+		  		#ID명{속성:값;속성:값;속성:값...}
+		  		
+		  	= Class명 (중복o) => 여러개 사용 가능
+		  		<div class="a b c"> (o)  ==> 공백 단위로 끊어 침 
+		  		
+		  		.class명{속성:값;속성:값;속성:값...}
+ 			
+ 			= 전체 *(모든 태그) => 글꼴의 경우 
+ 			
+ 				*{속성:값;속성:값;속성:값...}
+ 				
+ 		   *= 가상선택자
+ 		   		a:hover 
+ 		   		h1:nth-child(1)/(2n)
+ 		   		
+ 		   	= 소속
+ 		   	= 여러개 태그나 클래스,아이디
+#aa, #bb{
+} 	
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+
+	width:100px;
+	height:100px;
+}
+
+#aa{
+	border:5px solid green;
+}
+#bb{
+	border:5px dotted green;
+}
+#cc{
+	border:5px dashed green;
+}
+#dd{
+	border:5px double green;
+}
+#ee{
+	border:5px groove green;
+}
+#ff{
+	border:5px ridge green;
+}
+#aaa{
+	padding: 20px; /* 20px 20px 20px 20px */
+	border: 1px solid black;
+	/*
+	-top -left -botton -right
+	
+	padding: 20px 10px 30px ==> Right 10px (Left를 따라간다)
+	
+	padding: [[v]]    
+	margin: [v[]]
+	*/
+}
+</style>
+</head>
+<body>
+	<div id="aaa">Box Model</div>
+	<div id="aa"></div>
+	<div id="bb"></div>
+	<div id="cc"></div>
+	<div id="dd"></div>
+	<div id="ee"></div>
+	<div id="ff"></div>
+</body>
+</html> 
