@@ -39,7 +39,7 @@ public class TripDAO {
 			}
 			
 			//4. 기능처리
-			public void tripAllData(TripVO vo)
+			public void tripInsertData(TripVO vo)
 			{
 				try
 				{
@@ -109,6 +109,72 @@ public class TripDAO {
 				}
 				
 				return list;
+			}
+			
+			private void setTripData(TripVO vo, ResultSet rs){
+				try
+				{
+					
+				}catch (Exception ex)
+				{
+					System.out.println("setData():");
+					ex.printStackTrace();
+					
+				}
+			}
+			
+			public void printTripData(TripVO vo) {
+				System.out.println("\t======================");
+				System.out.println("pno: "+vo.getPno());
+				System.out.println("pname: "+vo.getPname());
+				System.out.println("grade: "+vo.getGrade());
+				System.out.println("review개수: "+vo.getTotalreview());
+				System.out.println("rank: "+vo.getRank());
+				System.out.println("tag: "+vo.getTag());
+				System.out.println("addr: "+vo.getAddr());
+				System.out.println("openhour: "+vo.getOpnhr());	
+			}
+			
+			public boolean hasTripVOName(String pname) {
+				boolean check=true;
+				try
+				{
+					getConnection();
+					String sql="SELECT COUNT(*) FROM trip WHERE pname=?";
+					ps=conn.prepareStatement(sql);
+					ps.setString(1, pname);
+					ResultSet rs=ps.executeQuery();
+					rs.next();
+					if(rs.getInt(1)==0) {
+						check=false;
+					}
+				}catch(Exception e)
+				{
+					System.out.println("hasTripVOName(): ");
+					e.printStackTrace();					
+				}
+				finally
+				{
+					disConnection();
+				}
+				return check;
+			}
+			
+			public int noOfName(String pname) throws Exception {
+				int no=0;
+				try{
+					getConnection();
+					String sql="SELECT no FROM trip WHERE pname=?";
+					ps=conn.prepareStatement(sql);
+					ps.setString(1, pname);
+					ResultSet rs=ps.executeQuery();
+					rs.next();
+					no=rs.getInt(1);
+					rs.close();
+				}finally {
+					disConnection();
+				}
+				return no;
 			}
 		
 		}
