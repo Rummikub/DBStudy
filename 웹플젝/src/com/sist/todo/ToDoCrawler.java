@@ -1,4 +1,4 @@
-package com.sist.food;
+package com.sist.todo;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,30 +8,17 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class FoodParser {
-	/* FOODINFO
-	 NO       NUMBER         
-	NAME     VARCHAR2(200)  
-	GRADE    NUMBER(4,2)    
-	TAG      VARCHAR2(1000) 
-	ADDR     VARCHAR2(1000) 
-	MAPX     VARCHAR2(2000) 
-	MAPY     VARCHAR2(1000) 
-	TEL      VARCHAR2(200)  
-	OPNHR    VARCHAR2(100) 
-	 */
+public class ToDoCrawler {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FoodDAO dao = new FoodDAO();
-		int maxPage = 1;
+		ToDoDAO dao = new ToDoDAO();
+		int maxPage = 32;
 		String name = "";
-		String tag;
+		String tags;
 		String addr;
 		double mapX;
 		double mapY;
-		String tel;
-		String opnhr;
-		
 		int cnt = 0;
 		try {
 			dao.getConnection();
@@ -40,14 +27,15 @@ public class FoodParser {
 		}
 		try {
 			for(int i=0; i<maxPage; i++) {
-				Document listDoc = Jsoup.connect("https://www.tripadvisor.co.kr/Restaurants").get();
+				Document listDoc = Jsoup.connect("https://www.tripadvisor.co.kr/"
+						+ "Attractions-g294197-Activities-oa"+30*i+"-Seoul.html#FILTERED_LIST").get();
 
 				Elements detailList = listDoc.select("div.listing_title a");
 
 				for(int j=0; j<detailList.size(); j++) {
 
 					Document detailDoc = Jsoup.connect("https://www.tripadvisor.co.kr"+detailList.get(j).attr("href")).get();
-					FoodVO vo = new FoodVO();
+					ToDoVO vo = new ToDoVO();
 					
 
 					vo.setNo(i+j);
@@ -56,8 +44,8 @@ public class FoodParser {
 					
 					try {
 						name = detailDoc.selectFirst("h1#HEADING").text();
-						if(dao.hasFoodVOName(name)) {
-							System.out.println("Foodinfo has "+name);
+						if(dao.hasToDoVOName(name)) {
+							System.out.println("ToDo has "+name);
 							continue;
 
 						}
@@ -72,11 +60,11 @@ public class FoodParser {
 					}
 					
 					try {
-						tag = detailDoc.selectFirst("span.is-hidden-mobile div.detail").text();
-						if(tag.contains("더 보기")) {
-							tag = tag.replace("더 보기", "");
+						tags = detailDoc.selectFirst("span.is-hidden-mobile div.detail").text();
+						if(tags.contains("더 보기")) {
+							tags = tags.replace("더 보기", "");
 						}
-						vo.setTag(tag.trim());
+						vo.setTags(tags.trim());
 					} catch (Exception e) {
 						continue;
 					}
@@ -107,8 +95,8 @@ public class FoodParser {
 					}
 					cnt++;
 					System.out.print(cnt);
-					dao.printFoodVOData(vo);
-					dao.foodInsert(vo);
+					dao.printToDoVOData(vo);
+					dao.toDoInsert(vo);
 				}
 			}
 		} catch (IOException e) {
