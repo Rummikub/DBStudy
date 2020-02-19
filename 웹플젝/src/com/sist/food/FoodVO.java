@@ -14,7 +14,7 @@ OPNHR    VARCHAR2(100)
  */
 			 private int no;
 			 private String name;
-			 private Double grade;
+			 private String grade;
 			 private String tag;
 			 private String addr;
 			 private Double mapX;
@@ -33,10 +33,10 @@ OPNHR    VARCHAR2(100)
 			public void setName(String name) {
 				this.name = name;
 			}
-			public Double getGrade() {
+			public String getGrade() {
 				return grade;
 			}
-			public void setGrade(Double grade) {
+			public void setGrade(String grade) {
 				this.grade = grade;
 			}
 			public String getTag() {

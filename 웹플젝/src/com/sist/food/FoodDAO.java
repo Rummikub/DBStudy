@@ -7,7 +7,7 @@ package com.sist.food;
 	import java.sql.ResultSet;
 	import java.util.ArrayList;
 
-import com.sist.todo.ToDoVO;
+import com.sist.food.FoodVO;
 
 	public class FoodDAO {
 		private Connection conn;
@@ -19,7 +19,7 @@ import com.sist.todo.ToDoVO;
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
 			} catch (Exception e) {
-				System.out.print("TodoDAO():");
+				System.out.print("FoodDAO():");
 				e.printStackTrace();
 			}
 		}
@@ -49,10 +49,10 @@ import com.sist.todo.ToDoVO;
 		public void foodInsert(FoodVO vo) {
 			try {
 				getConnection();
-				String sql = "INSERT INTO todo VALUES((SELECT NVL(MAX(no)+1,1) FROM foodinfo),?,?,?,?,?,?,?,?)";
+				String sql = "INSERT INTO foodinfo VALUES((SELECT NVL(MAX(no)+1,1) FROM foodinfo),?,?,?,?,?,?,?,?)";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, vo.getName());
-				ps.setDouble(2, vo.getGrade());
+				ps.setString(2, vo.getGrade());
 				ps.setString(3, vo.getTag());
 				ps.setString(4, vo.getAddr());
 				ps.setDouble(5, vo.getMapX());
@@ -94,7 +94,7 @@ import com.sist.todo.ToDoVO;
 			try {
 				vo.setNo(rs.getInt(1));
 				vo.setName(rs.getString(2));
-				vo.setGrade(rs.getDouble(3));
+				vo.setGrade(rs.getString(3));
 				vo.setTag(rs.getString(4));
 				vo.setAddr(rs.getString(5));
 				vo.setMapX(rs.getDouble(6));

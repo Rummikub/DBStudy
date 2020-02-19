@@ -13,7 +13,7 @@ public class ToDoCrawler {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ToDoDAO dao = new ToDoDAO();
-		int maxPage = 32;
+		int maxPage = 1;
 		String name = "";
 		String tags;
 		String addr;
@@ -26,7 +26,8 @@ public class ToDoCrawler {
 			System.out.println("error");
 		}
 		try {
-			for(int i=0; i<maxPage; i++) {
+			for(int i=0; i<maxPage; i++)
+			{
 				Document listDoc = Jsoup.connect("https://www.tripadvisor.co.kr/"
 						+ "Attractions-g294197-Activities-oa"+30*i+"-Seoul.html#FILTERED_LIST").get();
 
@@ -37,20 +38,21 @@ public class ToDoCrawler {
 					Document detailDoc = Jsoup.connect("https://www.tripadvisor.co.kr"+detailList.get(j).attr("href")).get();
 					ToDoVO vo = new ToDoVO();
 					
-
-					vo.setNo(i+j);
+						System.out.println(listDoc);
+					//vo.setNo(i+j);
 					System.out.println(i+"-"+j+" : ");
 
 					
 					try {
 						name = detailDoc.selectFirst("h1#HEADING").text();
-						if(dao.hasToDoVOName(name)) {
-							System.out.println("ToDo has "+name);
+						//if(dao.hasToDoVOName(name))
+						{
+							//System.out.println("ToDo has "+name);
 							continue;
 
 						}
 
-						vo.setName(name);
+						//vo.setName(name);
 
 					} catch (Exception e) {
 					
@@ -59,7 +61,7 @@ public class ToDoCrawler {
 
 					}
 					
-					try {
+					/*try {
 						tags = detailDoc.selectFirst("span.is-hidden-mobile div.detail").text();
 						if(tags.contains("더 보기")) {
 							tags = tags.replace("더 보기", "");
@@ -97,6 +99,7 @@ public class ToDoCrawler {
 					System.out.print(cnt);
 					dao.printToDoVOData(vo);
 					dao.toDoInsert(vo);
+				}*/
 				}
 			}
 		} catch (IOException e) {
