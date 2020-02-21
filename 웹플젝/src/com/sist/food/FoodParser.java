@@ -148,15 +148,14 @@ public class FoodParser {
 					}
 					
 					
-					//운영시간
+					//운영시간 *** 수정 필요
 					try {
-						vo.setOpnhr(detailDoc.select("div.react-container span").text());
+						vo.setOpnhr(detailDoc.select("div.react-container span").get(1).text());
 					} catch (Exception e) {
 						
 						continue;
 					}
 					
-				
 					
 					cnt++;
 					System.out.print(cnt);

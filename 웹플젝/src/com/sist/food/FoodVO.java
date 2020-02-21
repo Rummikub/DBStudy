@@ -12,6 +12,18 @@ MAPY     VARCHAR2(1000)
 TEL      VARCHAR2(200)  
 OPNHR    VARCHAR2(100) 
  */
+	
+	
+	/*
+	 주말동안 만들 아이
+	no NUMBER,
+	rno NUMBER,
+	id VARCHAR(50),
+	name VARCHAR2(51),
+	score NUMBER,
+	regdate VARCHAR2(20),
+	title VARCHAR2(100)
+	 */
 			 private int no;
 			 private String name;
 			 private String grade;

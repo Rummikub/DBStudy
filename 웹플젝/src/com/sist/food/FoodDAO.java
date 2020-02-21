@@ -108,7 +108,7 @@ import com.sist.food.FoodVO;
 		}
 
 		public void printFoodVOData(FoodVO vo) {
-			System.out.println("\t========================");
+			System.out.println("\t============================");
 			System.out.println("no : "+vo.getNo());
 			System.out.println("name : "+vo.getName());
 			System.out.println("grade : "+vo.getGrade());
@@ -117,7 +117,7 @@ import com.sist.food.FoodVO;
 			System.out.println("mapX : "+vo.getMapX());
 			System.out.println("mapY : "+vo.getMapY());
 			System.out.println("tel : "+vo.getTel());
-			System.out.println("openhr : "+vo.getOpnhr());
+			System.out.println("운영시간 : "+vo.getOpnhr());
 			System.out.println("================================");
 		}
 

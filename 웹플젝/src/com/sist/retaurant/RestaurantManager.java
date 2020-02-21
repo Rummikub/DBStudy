@@ -83,7 +83,8 @@ OPNHRLINK    VARCHAR2(200)
 					}
 					
 					
-				/*	
+					/*
+					 
 					// *메뉴는 빼자 => 없는 애도 있음!!! ---------------------------------------------나중엔 빼기
 					try {
 						menulink = detailDoc.selectFirst("").text();
@@ -92,6 +93,7 @@ OPNHRLINK    VARCHAR2(200)
 						
 						continue;
 					}
+					
 					*/
 					
 					
@@ -99,7 +101,7 @@ OPNHRLINK    VARCHAR2(200)
 					
 					//*운영시간링크 div.yF-2QEPN div.all-open-hours
 					try {
-						vo.setOpnhrlink(detailDoc.selectFirst("div.public-location-hours-LocationHours__hoursPopover--2h1HP div.all-open-hours").text());
+						vo.setOpnhrlink(detailDoc.selectFirst(" div.yF-2QEPN div.all-open-hours").text());
 					} catch (Exception e) {
 						e.printStackTrace();
 						continue;
