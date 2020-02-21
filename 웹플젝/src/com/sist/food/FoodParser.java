@@ -28,8 +28,7 @@ public class FoodParser {
 		
 		
 		//전체 몇 페이지
-		int maxPage = 1;
-		//int maxPage = 3685;
+		int maxPage = 333;
 		String name = "";
 		String tag;
 		String addr;
@@ -73,7 +72,7 @@ public class FoodParser {
 						name = detailDoc.selectFirst("h1.ui_header").text();
 						if(dao.hasFoodVOName(name))
 						{
-							System.out.println("Retaurant has "+name);
+							System.out.println(name);
 							continue;
 							
 						}
@@ -151,7 +150,7 @@ public class FoodParser {
 					
 					//운영시간
 					try {
-						vo.setOpnhr(detailDoc.select("div.react-container span").get(3).text());
+						vo.setOpnhr(detailDoc.select("div.react-container span").text());
 					} catch (Exception e) {
 						
 						continue;

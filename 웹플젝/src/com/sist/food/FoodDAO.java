@@ -13,7 +13,7 @@ import com.sist.food.FoodVO;
 		private Connection conn;
 		private PreparedStatement ps;
 		private ResultSet rs;
-		private final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
+		private final String URL = "jdbc:oracle:thin:@211.238.142.200:1521:XE";
 
 		public FoodDAO() {
 			try {
