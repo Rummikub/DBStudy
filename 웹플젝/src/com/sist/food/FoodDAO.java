@@ -49,7 +49,7 @@ import com.sist.food.FoodVO;
 		public void foodInsert(FoodVO vo) {
 			try {
 				getConnection();
-				String sql = "INSERT INTO foodinfo VALUES((SELECT NVL(MAX(no)+1,1) FROM foodinfo),?,?,?,?,?,?,?,?)";
+				String sql = "INSERT INTO foodinfo2 VALUES((SELECT NVL(MAX(no)+1,1) FROM foodinfo2),?,?,?,?,?,?,?,?)";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, vo.getName());
 				ps.setString(2, vo.getGrade());
@@ -72,7 +72,7 @@ import com.sist.food.FoodVO;
 			ArrayList<FoodVO> list = new ArrayList<FoodVO>();
 			try {
 				getConnection();
-				String sql = "SELECT * FROM foodinfo";
+				String sql = "SELECT * FROM foodinfo2";
 				ps = conn.prepareStatement(sql);
 				rs = ps.executeQuery();
 				while(rs.next()) {
@@ -125,7 +125,7 @@ import com.sist.food.FoodVO;
 			boolean check = true;
 			try {
 				getConnection();
-				String sql = "SELECT COUNT(*) FROM foodinfo WHERE name = ?";
+				String sql = "SELECT COUNT(*) FROM foodinfo2 WHERE name = ?";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, name);
 				rs = ps.executeQuery();
@@ -147,7 +147,7 @@ import com.sist.food.FoodVO;
 			int no = 0;
 			try {
 				getConnection();
-				String sql = "SELECT no FROM foodinfo WHERE name = ?";
+				String sql = "SELECT no FROM foodinfo2 WHERE name = ?";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, name);
 				ResultSet rs = ps.executeQuery();
