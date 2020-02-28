@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+
+*{font-family: 'Noto Sans KR';}
+header {margin: 0px  auto; overflow: hidden; background-color: #ffffff; }
+li{list-style-type: none;}
+
+header > #top {
+	border: 0px solid #cccccc;
+	width: 1367px; margin: 0px auto; overflow: hidden;
+}
+
+header > #top > .logo{ float: left; border: 0px solid blue; overflow: hidden; margin:0px auto;	line-height: 50px;}
+
+header > #top > #sub { background: #f2f2f2; background-image : url("https://image.flaticon.com/icons/svg/483/483356.svg"); background-size: 20px;  
+
+  background-position: right; 
+
+  background-repeat:no-repeat;}
+
+header > #top #top_right >li {
+	border: 0px solid red;
+	font-size: 1.4em; font-weight: bold;  float: right; margin-left: 30px; 
+}
+
+header > #up_left {
+	border: 0px solid green;
+	height: 45px; width: 1367px; margin: 0px auto; float: left;
+}
+
+
+header > #up_left > ul > li {
+	border: 0px solid red;
+	float: left; margin-right: 15px; margin-left: 10px; font-weight: bold;
+} 

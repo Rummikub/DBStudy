@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>외부 글꼴</title>
+<style type="text/css">
+	/*기본적으로 전체 div는 굳이 height안 잡아줘도 됨 자식에게 맞추려면 hidden!!*/
+	#wrap {
+		width: 800px; margin: 0px auto;
+		border: 0px solid red;
+		overflow: hidden;
+	}
+	
+	#wrap > ul > li{
+		width: 140px; height: 60px;
+		border: 1px solid #cccccc;
+		list-style-type: none; float: left;
+	
+		text-align: center; line-height: 60px;
+		font-size: 1.5m; color: #ffffff;
+		font-weight: bold;
+		
+		border-left-width: 0px;
+		
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e4f5fc+0,a2bff2+5,bfe8f9+50,9fd8ef+77,27cedd+100 */
+		background: rgb(228,245,252); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(228,245,252,1) 0%, rgba(162,191,242,1) 5%, rgba(191,232,249,1) 50%, rgba(159,216,239,1) 77%, rgba(39,206,221,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(228,245,252,1) 0%,rgba(162,191,242,1) 5%,rgba(191,232,249,1) 50%,rgba(159,216,239,1) 77%,rgba(39,206,221,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(228,245,252,1) 0%,rgba(162,191,242,1) 5%,rgba(191,232,249,1) 50%,rgba(159,216,239,1) 77%,rgba(39,206,221,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#27cedd',GradientType=0 ); /* IE6-9 */		
+	}
+	
+	#wrap > ul > li:hover{
+		
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e0f3fa+16,ced5e5+16,81d0f4+93,e8f4fc+98&0.71+0,0.38+100 */
+		background: -moz-linear-gradient(top,  rgba(206,213,229,0.71) 0%, rgba(206,213,229,0.66) 16%, rgba(129,208,244,0.4) 93%, rgba(232,244,252,0.39) 98%, rgba(232,244,252,0.38) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(206,213,229,0.71) 0%,rgba(206,213,229,0.66) 16%,rgba(129,208,244,0.4) 93%,rgba(232,244,252,0.39) 98%,rgba(232,244,252,0.38) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(206,213,229,0.71) 0%,rgba(206,213,229,0.66) 16%,rgba(129,208,244,0.4) 93%,rgba(232,244,252,0.39) 98%,rgba(232,244,252,0.38) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5ced5e5', endColorstr='#61e8f4fc',GradientType=0 ); /* IE6-9 */		
+	}
+</style>
+</head>
+<body>
+  <div id="wrap">
+        <ul>
+            <li style="border-left-width: 1px;">menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+    </div>
+</body>
+</html>

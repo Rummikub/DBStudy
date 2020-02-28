@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+*{font-family: 'Noto Sans KR';}
+body {width: 1367px; height:100%; margin: 0px auto; overflow:hidden;}
+li{list-style-type: none;}
+img { width: 300px; height: 200px;}
+#name {font-size: 20px; font-weight: bold;}
+
+body > #search { 
+	border: 0px solid red;  height: 520px; width: 1367px;
+	background-image: url("https://static.tacdn.com/img2/branding/homepage/home-tab3-hero-1367x520-prog.jpg");
+	text-align:center;
+}
+	
+
+#mid_info > div > h3,
+#score { color: #00aa6c;}
+
+
+body > #search > span { margin-top: 100px auto; margin-bottom: auto;}
+
+#search > span {
+	font-size: 3.0em; font-weight: bold; color:#ffffff; overflow:hidden;
+}
+
+.tag_detail {overflow:hidden;}
+
+#search > input[type="text"] {
+	width: 740px; font-size: 20px; margin-top: 20px; height: 53px; margin-left: 10px; border-radius: 50px; outline:none;
+}
+
+#search > input[type="button"] {
+	width: 60px; height: 60px; background-color: #078171; color: #ffffff; border-radius: 50px;
+}
+
+#mid_info { overflow: hidden;border:0px solid #cccccc; margin-left: 70px; margin-bottom: 30px;}
+
+#mid_info > div {
+	 float: left; 
+	 border: 2px solid #cccccc; border-radius: 5px; height: 250px; width: 320px; margin: 50px 30px auto; 
+	 text-align: center; float: left; margin-left: 100px auto;  overflow: hidden;
+}
+
+#tag { border: 0px solid red; overflow: hidden;}
+
+.tag_name0 > div { float: left; border: 0px solid blue; margin-left: 23px; margin-right: 15px; margin-bottom: 10px;}
+.tag_name1 > div { float: left; border: 0px solid blue; margin-left: 23px; margin-right: 15px; margin-bottom: 10px;}
+.tag_name2 > div { float: left; border: 0px solid blue; margin-left: 23px; margin-right: 15px; margin-bottom: 10px;}
+.tag_name3 > div { float: left; border: 0px solid blue; margin-left: 23px; margin-right: 15px; margin-bottom: 10px;}
+.tag_name4 > div { float: left; border: 0px solid blue; margin-left: 23px; margin-right: 15px; margin-bottom: 10px;}
+
+
+#footer { background-color: #f2f2f2;}
+#footer > div { border: 0px solid red; float: left; margin-bottom: 50px; }
+#footer > div:nth-child(1) {width: 650px; height: 180px; font-size: xx-small;}
+#footer > div:nth-child(1) >p {font-size: 0.8em;}
+#footer > div:nth-child(2) {width: 300px; height: 180px;}
+#footer > div:nth-child(3) {width: 200px; height: 180px;}
+#footer > div:nth-child(4) {width: 200px; height: 180px;}

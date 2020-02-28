@@ -1,0 +1,52 @@
+<!-- 
+태그 선택자
+head랑 title사이 <style>
+		CSS 기본 선택자
+		: Tag선택자  tag { key:value; }
+		: Class   .class{}
+		: id	  #id{}
+ 
+기능 태그 : <a> <img>  
+
+font / span =  인라인속성
+p / div = 블락속성
+ -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	font{
+		font-size:20px;
+		font-family:맑은 고딕;
+		color:blue;
+	}
+	
+	/* 혼합 선택자 */
+	p,div,span{  	
+		color:#00FFFF;
+	}	
+	
+</style>
+
+
+</head>
+<body>
+	
+	<font>안녕하세요.</font>
+	<font>반갑습니다.</font>
+
+	<span>여름입니다.</span>
+	<span>겨울입니다.</span>
+
+	<p>가을입니다.</p>
+	<p>봄입니다.</p>
+	
+	<div>사과</div>
+	<div>바나나</div>
+	<div>딸기</div>
+
+</body>
+</html>

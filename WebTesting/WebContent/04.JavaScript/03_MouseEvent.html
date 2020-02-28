@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MouseEvent</title>
+<script type="text/javascript">
+	function sub() {
+		window.alert("sub function()");  				
+		
+		// 내장 객체 (객체도 쓰지 않고 호출이 되었다는 것)  => 아래같이 쓰면 실행이 안된다 (window는 생략해도 된다고 합니당 내장객체는 아님~)
+		var w=new Window();
+		w.alert("HAHA");
+	}
+
+	// form태그가 중요한 이유 : 데이터를 뿌려주기 때문.
+	
+	function dlSub() {
+		window.alert("dlSub()호출 했다!");
+	}
+	
+	function aa() {
+		var value=window.prompt("원하시는 숫자를 넣으세요","정수형 1~10까지만 입력");
+		window.alert(value);
+	}
+	
+	function bb() {
+		var result=window.confirm("정말로 삭제하시겠습니까?");
+		//window.alert(result);
+		
+		if(result==true){
+			window.alert("삭제되었습니다");
+		}else{
+			alert("삭제되지 않았다");
+		}
+	}
+	
+	function cc(a,b,str){
+		var r=a+","+b+","+str;
+		alert(r);
+	}
+	
+	
+	// type=button ==> type=text로 변경했다는 것!
+	function dd(obj) {
+		obj.type="text";
+		obj.style.color="red";
+		obj.style.fontsize="20px";				
+		
+		// font_size (in Java) 대소문자 구분을 안하는 애들은 언더바를 넣어줘야 함  
+		//(ex: 변수 a (소문자) 클래스 Class (대문자) strClass (소문자로 시작해서 대문자로 끝남)
+	}
+	
+	function bigText(obj){
+		obj.style.color="blue";
+		obj.style.fontSize="40px";
+	}
+	
+	function normalText(obj) {
+		obj.style.color="red";
+		obj.style.fontSize="9px";
+	}
+</script>
+</head>
+<body>
+   <input type="button" value="확인합니다" onclick="sub()"/>
+   <br/><br/> 
+   <a href="#">
+   		<span onclick="sub()">마우스를 클릭하세요</span>
+   </a>
+   
+   <br/><br/>
+   <input type="button" value="확인01" onmousedown="sub()"/>
+   <input type="button" value="확인02" onmouseup="sub()"/>
+   <input type="button" value="확인03" ondblclick="dlSub()"/>
+   
+   <br/><br/>
+   <input type="button" value="확인04" onclick="aa()"/>
+   <input type="button" value="확인05" onclick="bb()"/>
+   <input type="button" value="확인06" onclick="cc(10,20,'apple')"/>
+   <!--  기본 문자열은 홀,쌍따옴표 다 상관 x (단,위에서처럼 밖에 쌍따옴표로 감싸져있으면 홀따옴표 사용해야해)  -->
+   <br/><br/>
+  
+  
+  	<!--  여기서 this = <input> 확인 07  태그를 말한다: 가져다 쓰는  setter개념 -->
+   <input type="button" value="확인07" onclick="dd(this)"/>
+   <br/><br/>
+   
+   
+   	<!--  hover (over;마우스 올려놓을때) (out;내려놨을때)-->
+   <a href="#" style="text-decoration: none;" >
+   			<span style="font-size: 20px" onmouseover="bigText(this)" onmouseout="normalText(this)">안녕하세요</span>
+   </a>
+   
+</body>
+</html>

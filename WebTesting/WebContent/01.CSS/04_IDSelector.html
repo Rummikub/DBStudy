@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 
+	~ 블락 (div)단위로 기준점을 잡아주면 편하다 					
+				dl   ==> 들여쓰기 
+					dt  ( title )
+						dd  ( 내용 )
+						
+						
+						왜 div 태그를 쓸까 ? 
+							인라인 속성이 아니고, 별 다른 기능이 없기 때문에 활용이 쉬워 
+							중복도 낮추고, 가독성 높이게 ***** 
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	#school {
+		color:red;
+			
+	}
+	
+	/* #아이디 .클래스 써줘야 태그를 빨리 찾을 수 있음*/
+	#school.student1 {
+		font-size: 20px;
+		text-decoration: underline;
+		
+	}
+	
+	.student2 {
+		font-size: 40px;
+		font-weight: bold;
+		font-family: fantasy;
+	
+	}
+</style>
+</head>
+<body>
+
+	<div id="school">
+		<div class="student1">
+			<dl>
+				<dt>이름</dt>
+				<dd>조인성</dd>
+			</dl>
+			
+			<dl>
+				<dt>학과</dt>
+				<dd>전자과</dd>			
+			</dl>
+		</div>
+		
+		<div class="student2">
+			<dl>
+				<dt>name</dt>
+				<dd>김태희</dd>
+			</dl>
+			
+			<dl>
+				<dt>major</dt>
+				<dd>기계과</dd>			
+			</dl>
+		</div>
+	</div>
+	
+	
+	<div id="school">
+	
+	
+	
+	</div>
+	
+</body>
+</html>

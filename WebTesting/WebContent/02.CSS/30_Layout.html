@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹포트</title>
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Permanent+Marker|Trade+Winds&display=swap" rel="stylesheet">
+<style type="text/css">
+	header{
+		width: 90%; margin: 0px auto;
+		border: 1px solid #cccccc;
+		height: 300px
+	}
+	
+	
+	header > #gnb{
+		width:600px; border: 0px solid blue; 
+		float:left;
+	}
+	
+	header > #lnb{
+		width:600px; border: 0px solid red;
+		float:right; position: relative; top:200px; 
+		
+	}
+	
+	header li{list-style: none;}
+	
+	header a{text-decoration: none; font-family: 'Trade Winds';}
+	
+	header > #gnb  li, header > #lnb  li{
+		border: 1px dotted #cccccc; width:100px; height:30px;
+		text-align: center; line-height: 30px; float: left;
+	}
+	
+	
+	header > #gnb > ul {
+		padding-left: 0px;
+	}
+	
+	header > #lnb > ul {
+		padding-right: 0px;
+	}
+	
+	
+	#content {
+	
+		width: 90%; margin: 2px auto;
+		border: 1px solid #cccccc;
+		overflow: hidden;
+	}
+	
+
+	
+ 	#section, #aside {
+ 		height: 600px; border: 1px solid #cccccc; float:left;
+ 		font-weight: bold; margin : 5px; font-size: 1.2em;
+ 	
+	}
+	
+	#section {
+		width: 80%;font-family: 'Pacifico';
+	}
+	
+	#aside {
+	
+		width: 18%;font-family:'Permanent Marker' ;
+	}
+	
+	footer {
+		width: 90%;  height: 200px; border: 1px solid #cccccc; font-weight: bold; font-size: 2.0em; text-align: center; margin:2px auto;
+		font-family: 'Trade Winds';
+	}
+</style>
+</head>
+<body>
+ 	<header>
+        <div id="gnb">
+            <ul>
+                <li><a href="#none">gnb01</a></li>
+                <li><a href="#none">gnb02</a></li>
+                <li><a href="#none">gnb03</a></li>
+                <li><a href="#none">gnb04</a></li>
+                <li><a href="#none">gnb05</a></li>
+            </ul>
+        </div>
+        <div id="lnb">
+            <ul>
+                <li><a href="#none">lnb01</a></li>
+                <li><a href="#none">lnb02</a></li>
+                <li><a href="#none">lnb03</a></li>
+                <li><a href="#none">lnb04</a></li>
+                <li><a href="#none">lnb05</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div id="content">
+        <div id="section"> It is a professional display space in which exhibitions under diverse subjects including the cultural contents are held. Such exhibitions include the ARTTOON ART, Exhibition for 100 Modern Cartoonists of Korea, and SF Mania Exhibition. </div>
+        <div id="aside"> It is equipped with a stop-motion animation experience space and experience display room in which it is possible to create an animation video clip of one’s own by creating a character in clay and taking photos with a camera. </div>
+    </div>
+    
+    <footer>office information</footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--  
+		**기준을 데이터별로 보아라 
+	
+		자식		부모		형제
+		자식: 선택자 > 선택자 { }
+		후손: 선택자  선택자 {}
+		
+		같은 기능을 하는 것은 같은 이름을 주는 것이 가독성에 좋음
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	
+	li {
+		list-style-type: none;
+	}
+	
+	
+	#one > li.menu{
+		color:#9966ff;
+	}
+	
+	#two .menu{
+		color:red;
+	}
+	
+	#one > li.menu, #two .menu{
+		font-weight: bold;
+		font-size: 30px;
+	}
+	
+</style>
+</head>
+<body>
+	<ul id="one">
+		<li>MENU1</li>
+		<li class="menu">MENU2</li>
+		<li>MENU3</li>
+		<li class="menu">MENU4</li>
+		<li>MENU5</li>	
+	</ul>
+	
+	<ol id="two">
+		<li class="menu">MENU1</li>
+		<li>MENU2</li>
+		<li class="menu">MENU3</li>
+		<li>MENU4</li>
+		<li class="menu">MENU5</li>	
+	</ol>
+</body>
+</html>
