@@ -3,13 +3,15 @@ package com.sist.food;
 public class ReviewVO {
 
 	private int no;
-	private int tdNo;
+	private int rNo;
 	private String id;
-	private String name;
 	private int score;
 	private String regdate;
 	private String title;
+	private String content;
+	private String exdate;
 
+	
 	public String getTitle() {
 		return title;
 	}
@@ -17,9 +19,6 @@ public class ReviewVO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-	private String content;
-	private String exdate;
 
 	public int getNo() {
 		return no;
@@ -30,11 +29,11 @@ public class ReviewVO {
 	}
 
 	public int getTdNo() {
-		return tdNo;
+		return rNo;
 	}
 
-	public void setTdNo(int tdNo) {
-		this.tdNo = tdNo;
+	public void setTdNo(int rNo) {
+		this.rNo = rNo;
 	}
 
 	public String getId() {
@@ -43,14 +42,6 @@ public class ReviewVO {
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public int getScore() {

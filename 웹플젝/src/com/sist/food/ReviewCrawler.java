@@ -14,21 +14,21 @@ public class ReviewCrawler {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		FoodDAO dao = new FoodDAO();
-		int maxPage = 333;
+		int maxPage = 3685;
 		String name = "";
 		int cnt = 0;
 		ReviewDAO rvdao = new ReviewDAO();
 		try {
 			for (int i = 0; i < maxPage; i++) {
-				Document listDoc = Jsoup.connect("https://www.tripadvisor.co.kr/" + "Attractions-g294197-Activities-oa"
-						+ 30 * i + "-Seoul.html#FILTERED_LIST").get();
-				Elements detailList = listDoc.select("div.listing_title a");
+				Document listDoc = Jsoup.connect("https://www.tripadvisor.co.kr/" 
+			+ "Restaurants-g294197-Activities-oa"+30*i+"-Seoul.html#EATERY_LIST_CONTENTS").get();
+				Elements detailList = listDoc.select("div.wQjYiB7z a");
 				for (int j = 0; j < detailList.size(); j++) {
 					Document detailDoc = Jsoup.connect("https://www.tripadvisor.co.kr" + detailList.get(j).attr("href"))
 							.get();
 					int tdNo;
 					try {
-						name = detailDoc.selectFirst("h1#HEADING").text();
+						name = detailDoc.selectFirst("h1.ui_header").text();
 						tdNo = dao.noOfName(name);
 						//System.out.println(todoNo + " : " + name);
 						if(rvdao.hasReview(tdNo)) {
@@ -36,7 +36,7 @@ public class ReviewCrawler {
 							continue;
 						}
 					} catch (Exception e) {
-						System.out.println("todo doesn't have "+ name);
+						System.out.println("this restaurant doesn't have "+ name);
 						e.printStackTrace();
 						continue;
 					}
@@ -48,16 +48,17 @@ public class ReviewCrawler {
 						String reviewText = html;
 						String[] reviewDataList = null;
 						try {
-							reviewText = reviewText.substring(reviewText.indexOf("class=\"location-review-card"),
-									reviewText.lastIndexOf("공유"));
+							reviewText = reviewText.substring(reviewText.indexOf("class=\"rev_wrap"),
+									reviewText.lastIndexOf("의견입니다"));
 							//System.out.println(reviewText);
-							reviewDataList = reviewText.split("공유");
+							reviewDataList = reviewText.split("의견입니다");
 						} catch (Exception e) {
 							System.out.println(name + " doesn't have review.");
 							e.printStackTrace();
 							break;
 						}
 						
+			
 						for (int k = 0; k < reviewDataList.length; k++) {
 							try {
 								System.out.println(i + " - " + j);
@@ -65,27 +66,21 @@ public class ReviewCrawler {
 								rvo.setTdNo(tdNo);
 								System.out.println(cnt + " at " + name);
 								String raw = reviewDataList[k];
-								String id_name = getDataByEnd(raw, "/Profile/", "</a>이 리뷰를 작성했습니다.", 200);
-								String[] temp = id_name.split("\">");
-								String id = temp[0];
-								System.out.println(id);
-								rvo.setId(id);
-								String userName = temp[1];
+								String userName = getDataByEnd(raw,"\"data-screenname=\""," data-memberid", 200);
 								System.out.println(userName);
-								rvo.setName(userName);
 								String score = getDataByStart(raw, "rating bubble_", "\"", 10);
 								System.out.println(score);
 								rvo.setScore(Integer.parseInt(score)/10);
-								String regdate = getDataByStart(raw, "</a>이 리뷰를 작성했습니다.", "</span>", 30).trim();
+								String regdate = getDataByStart(raw, "class=\"ratingDate\" title=\"", "\">리뷰 게시 날짜:", 10).trim();
 								System.out.println(regdate);
 								rvo.setRegdate(regdate);
-								String title = getDataByEnd(raw, "<span>", "</span></span></a>", 200);
+								String title = getDataByEnd(raw, "class=\"noQuotes\">", "</span>", 200);
 								System.out.println(title);
 								rvo.setTitle(title);
-								String content = getDataByEnd(raw, "<span>", "</span></q>", 2000);
+								String content = getDataByEnd(raw, "class=\"partial_entry\">", "</p>", 2000);
 								System.out.println(content);
 								rvo.setContent(content);
-								String exdate = getDataByStart(raw, "체험 날짜:</span>", "</span>", 30).trim();
+								String exdate = getDataByStart(raw, "방문 날짜:</span>", "</div>", 30).trim();
 								System.out.println(exdate);
 								rvo.setExdate(exdate);
 								System.out.println("================================");
@@ -139,5 +134,5 @@ public class ReviewCrawler {
 		
 		return raw;
 	}
-
 }
+					

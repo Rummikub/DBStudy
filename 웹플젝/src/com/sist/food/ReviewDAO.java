@@ -47,16 +47,15 @@ public class ReviewDAO {
 	public void reviewInsert(ReviewVO vo) {
 		try {
 			getConnection();
-			String sql = "INSERT INTO review VALUES((SELECT NVL(MAX(no)+1,1) FROM review),?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO review VALUES((SELECT NVL(MAX(no)+1,1) FROM review),?,?,?,?,?,?,?)";
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, vo.getTdNo());
 			ps.setString(2, vo.getId());
-			ps.setString(3, vo.getName());
-			ps.setInt(4, vo.getScore());
-			ps.setString(5, vo.getRegdate());
-			ps.setString(6, vo.getTitle());
-			ps.setString(7, vo.getContent());
-			ps.setString(8, vo.getExdate());
+			ps.setInt(3, vo.getScore());
+			ps.setString(4, vo.getRegdate());
+			ps.setString(5, vo.getTitle());
+			ps.setString(6, vo.getContent());
+			ps.setString(7, vo.getExdate());
 			ps.executeUpdate();
 		} catch (Exception e) {
 			System.out.println("reviewInsert():");
@@ -66,14 +65,14 @@ public class ReviewDAO {
 		}
 	}
 
-	public boolean hasReview(int tdNo) {
+	public boolean hasReview(int rNo) {
 		boolean bCheck = false;
 
 		try {
 			getConnection();
 			String sql = "SELECT CASE WHEN EXISTS (SELECT 1 FROM review WHERE tdNo = ?) THEN 1 ELSE 0 END FROM DUAL";
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, tdNo);
+			ps.setInt(1, rNo);
 			ResultSet rs = ps.executeQuery();
 			rs.next();
 			if(rs.getInt(1)==1) bCheck = true;

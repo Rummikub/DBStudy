@@ -26,7 +26,7 @@ public class FoodParser {
 		
 		
 		//전체 몇 페이지
-		int maxPage = 333;
+		int maxPage = 3685;
 		String name = "";          
 		String tag;
 		String addr;
