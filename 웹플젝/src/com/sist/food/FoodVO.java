@@ -1,27 +1,27 @@
 package com.sist.food;
-//categoryPage
+//categoryPage 음식점 데이터, 리뷰데이터
 public class FoodVO {
-/*
-NO       NUMBER         
-NAME     VARCHAR2(200)  
-GRADE    NUMBER(4,2)    
-TAG      VARCHAR2(1000) 
-ADDR     VARCHAR2(1000) 
-MAPX     VARCHAR2(2000) 
-MAPY     VARCHAR2(1000) 
-TEL      VARCHAR2(200)  
-OPNHR    VARCHAR2(100) 
- */
-	
-			 private int no;
-			 private String name;
-			 private String grade;
-			 private String tag;
-			 private String addr;
-			 private Double mapX;
-			 private Double mapY;
-			 private String tel;
-			 private String opnhr;
+			
+			//Restaurant
+			private int no;			
+			private String name;
+			private String tags;
+			private String addr;
+			private String tel;
+			private String openHours;
+			private String price;
+			private double lat;
+			private double lng;
+
+			//Review
+			private int rNo;
+			private String id;
+			private String title;
+			private String bubble;
+			private String regdate;
+			private String content;
+			private String expdate;
+			
 			public int getNo() {
 				return no;
 			}
@@ -34,17 +34,11 @@ OPNHR    VARCHAR2(100)
 			public void setName(String name) {
 				this.name = name;
 			}
-			public String getGrade() {
-				return grade;
+			public String getTags() {
+				return tags;
 			}
-			public void setGrade(String grade) {
-				this.grade = grade;
-			}
-			public String getTag() {
-				return tag;
-			}
-			public void setTag(String tag) {
-				this.tag = tag;
+			public void setTags(String tags) {
+				this.tags = tags;
 			}
 			public String getAddr() {
 				return addr;
@@ -52,31 +46,82 @@ OPNHR    VARCHAR2(100)
 			public void setAddr(String addr) {
 				this.addr = addr;
 			}
-			public Double getMapX() {
-				return mapX;
-			}
-			public void setMapX(Double mapX) {
-				this.mapX = mapX;
-			}
-			public Double getMapY() {
-				return mapY;
-			}
-			public void setMapY(Double mapY) {
-				this.mapY = mapY;
-			}
 			public String getTel() {
 				return tel;
 			}
 			public void setTel(String tel) {
 				this.tel = tel;
 			}
-			public String getOpnhr() {
-				return opnhr;
+			public String getOpenHours() {
+				return openHours;
 			}
-			public void setOpnhr(String opnhr) {
-				this.opnhr = opnhr;
+			public void setOpenHours(String openHours) {
+				this.openHours = openHours;
 			}
-			 
-	
-	
+			public String getPrice() {
+				return price;
+			}
+			public void setPrice(String price) {
+				this.price = price;
+			}
+			public double getLat() {
+				return lat;
+			}
+			public void setLat(double lat) {
+				this.lat = lat;
+			}
+			public double getLng() {
+				return lng;
+			}
+			public void setLng(double lng) {
+				this.lng = lng;
+			}
+			public int getrNo() {
+				return rNo;
+			}
+			public void setrNo(int rNo) {
+				this.rNo = rNo;
+			}
+			public String getId() {
+				return id;
+			}
+			public void setId(String id) {
+				this.id = id;
+			}
+			
+			public String getTitle() {
+				return title;
+			}
+			public void setTitle(String title) {
+				this.title = title;
+			}
+			public String getBubble() {
+				return bubble;
+			}
+			public void setBubble(String bubble) {
+				this.bubble = bubble;
+			}
+			public String getRegdate() {
+				return regdate;
+			}
+			public void setRegdate(String regdate) {
+				this.regdate = regdate;
+			}
+			public String getContent() {
+				return content;
+			}
+			public void setContent(String content) {
+				this.content = content;
+			}
+			public String getExpdate() {
+				return expdate;
+			}
+			public void setExpdate(String expdate) {
+				this.expdate = expdate;
+			}
+			
+			
 }
+			
+			
+
