@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
+.element::-webkit-scrollbar { width: 0 !important }
 *{font-family: 'Noto Sans KR';}
-body {width: 1367px; height:100%; margin: 0px auto; overflow:hidden;}
+body {width: 1367px; height:100%; margin: 0px auto; overflow:scroll;}
 li{list-style-type: none;}
 img { width: 300px; height: 200px;}
 #name {font-size: 20px; font-weight: bold;}
@@ -22,7 +23,7 @@ body > #search > span { margin-top: 100px auto; margin-bottom: auto;}
 	font-size: 3.0em; font-weight: bold; color:#ffffff; overflow:hidden;
 }
 
-.tag_detail {overflow:hidden;}
+
 
 #search > input[type="text"] {
 	width: 740px; font-size: 20px; margin-top: 20px; height: 53px; margin-left: 10px; border-radius: 50px; outline:none;

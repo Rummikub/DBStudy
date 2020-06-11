@@ -10,7 +10,7 @@ header > #top {
 	width: 1367px; margin: 0px auto; overflow: hidden;
 }
 
-header > #top > .logo{ float: left; border: 0px solid blue; overflow: hidden; margin:0px auto;	line-height: 50px;}
+header > #top > .logo{ float: left; border: 1px solid blue; overflow: hidden; margin:0px auto;	line-height: 50px;}
 
 header > #top > #sub { background: #f2f2f2; background-image : url("https://image.flaticon.com/icons/svg/483/483356.svg"); background-size: 20px;  
 
@@ -19,7 +19,7 @@ header > #top > #sub { background: #f2f2f2; background-image : url("https://imag
   background-repeat:no-repeat;}
 
 header > #top #top_right >li {
-	border: 0px solid red;
+	border: 1px solid red;
 	font-size: 1.4em; font-weight: bold;  float: right; margin-left: 30px; 
 }
 

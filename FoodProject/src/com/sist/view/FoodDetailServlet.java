@@ -13,7 +13,7 @@ import com.sist.manager.FoodHouseVO;
 public class FoodDetailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
 		response.setContentType("text/html;charset=UTF-8");  //text/html;charset=ISO-8859 -> default
 		PrintWriter out=response.getWriter(); // 브라우저가 읽어갈 위치 지정 (메모리)
 		
@@ -23,8 +23,11 @@ public class FoodDetailServlet extends HttpServlet {
 		FoodDAO dao=FoodDAO.newInstance();
 		FoodHouseVO vo=dao.foodDetailData(Integer.parseInt(no));
 		String temp=vo.getAddress();
+		
 		temp=temp.substring(temp.lastIndexOf("구")+1,temp.lastIndexOf("동")+1);
 		ArrayList<FoodHouseVO> list=dao.foodLocationData(temp);
+
+	
 		
 		//3 HTML로 출력
 		out.println("<html>");
@@ -95,14 +98,14 @@ public class FoodDetailServlet extends HttpServlet {
 		
 		out.println("<tr>");
 		out.println("<td colspan=2 class=text-center>");
-		out.println("좋아요("+vo.getGood()+") | ");
-		out.println("좋아요("+vo.getSoso()+") | ");
-		out.println("좋아요("+vo.getBad()+")");
+		out.println("맛있다("+vo.getGood()+") | ");
+		out.println("괜찮다("+vo.getSoso()+") | ");
+		out.println("별로("+vo.getBad()+")");
 		out.println("</td>");
 		out.println("</tr>");
 		
 		out.println("<tr>");
-		out.println("<td colspan class=text-right>");
+		out.println("<td colspan=2 class=text-right>");
 		out.println("<a href=\"#\" class=\"btn btn-xs btn-danger\">찜</a>");
 		out.println("<a href=\"#\" class=\"btn btn-xs btn-success\">예약</a>");
 		out.println("<a href=\"javascript:history.back()\" class=\"btn btn-xs btn-primary\">목록</a>");
@@ -121,6 +124,8 @@ public class FoodDetailServlet extends HttpServlet {
 		
 		out.println("<tr>");
 		out.println("<td>");
+		
+		
 		for(FoodHouseVO fvo:list)
 		{
 			out.println("<table class=\"table\">");
@@ -132,6 +137,7 @@ public class FoodDetailServlet extends HttpServlet {
 			out.println("<td width=70%>");
 			out.println(fvo.getTitle()+"&nbsp;"+fvo.getScore());
 			out.println("</td>");
+			out.println("</tr>");
 			
 			out.println("<tr>");
 			out.println("<td width=70%>");
@@ -154,6 +160,9 @@ public class FoodDetailServlet extends HttpServlet {
 			out.println("</tr>");
 			out.println("</table>");
 		}
+	
+		
+		
 		out.println("</td>");
 		out.println("</tr>");
 		out.println("</table>");

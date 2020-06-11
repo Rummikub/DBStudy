@@ -24,12 +24,12 @@ public class MovieDAO {
 			}
 		}
 		
-		//Singleturn ; 접속자 별로 한개의 DAO만 사용 할 수 있음  = 동일한 주소를 가져오지 않을까 ~ 최적화의 일종
+		//Singletone ; 접속자 별로 한개의 DAO만 사용 할 수 있음  = 동일한 주소를 가져오지 않을까 ~ 최적화의 일종
  		
 		/*
 		 	디자인 패턴
 		 	=======
-		 	싱글턴		==> Spring
+		 	싱글톤		==> Spring
 		 	팩토리
 		 	MV
 		 	MVC
